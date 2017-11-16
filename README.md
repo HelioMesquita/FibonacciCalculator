@@ -1,2 +1,2 @@
-# fibonacci-calculator-swift
-simple fibonacci calculator in swift
+# Fibonacci-Calculator-Swift
+A simple fibonacci calculator in swift
