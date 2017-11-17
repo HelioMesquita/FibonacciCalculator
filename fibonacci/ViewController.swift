@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
   @IBOutlet weak var numberOfSequencesTextField: UITextField!
   @IBOutlet weak var timeElapsedLabel: UILabel!
@@ -8,6 +8,7 @@ class ViewController: UIViewController {
 
   @IBAction func startButton(_ sender: UIButton) {
     if let number = Double(numberOfSequencesTextField.text!) {
+      view.endEditing(true)
       let timeStart = Date()
       let fibonacciNumber = fibonacciFormula(number)
       let timeElapsed = Date()
@@ -16,9 +17,14 @@ class ViewController: UIViewController {
     }
   }
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    numberOfSequencesTextField.delegate = self
+  }
+
   private func setViewElements(executionTime: TimeInterval, fibonacciNumber: Double) {
-    self.timeElapsedLabel.text = String(executionTime) + " seconds"
-    self.fibonacciNumberLabel.text = String(fibonacciNumber)
+    timeElapsedLabel.text = String(executionTime) + " seconds"
+    fibonacciNumberLabel.text = String(fibonacciNumber)
   }
 
   private func fibonacciFormula(_ numberOfSequences: Double) -> Double {
@@ -26,5 +32,10 @@ class ViewController: UIViewController {
       return 1
     }
     return fibonacciFormula(numberOfSequences - 1) +                                    fibonacciFormula(numberOfSequences - 2)
+  }
+
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    numberOfSequencesTextField.resignFirstResponder()
+    return true
   }
 }
