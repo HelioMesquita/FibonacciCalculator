@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, FibonacciFormulaHandable {
 
   @IBOutlet weak var numberOfSequencesTextField: UITextField!
   @IBOutlet weak var timeElapsedLabel: UILabel!
@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
       view.endEditing(true)
       startButtonOutlet.isEnabled = false
       startButtonOutlet.startLoading()
-      startProcessingFibonacci(numberOfSequences: numberOfSequences)
+      begginProcessingFibonacci(numberOfSequences: numberOfSequences)
     }
   }
 
@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     return true
   }
 
-  private func startProcessingFibonacci(numberOfSequences: Double) {
+  private func begginProcessingFibonacci(numberOfSequences: Double) {
     DispatchQueue.global(qos: .background).async {
       let timeStart = Date()
       let fibonacciNumber = self.fibonacciFormula(numberOfSequences)
@@ -34,13 +34,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
       let executionTime = timeElapsed.timeIntervalSince(timeStart)
       self.updateView(executionTime: executionTime, fibonacciNumber: fibonacciNumber)
     }
-  }
-
-  private func fibonacciFormula(_ numberOfSequences: Double) -> Double {
-    if numberOfSequences < 1 {
-      return 1
-    }
-    return fibonacciFormula(numberOfSequences - 1) + fibonacciFormula(numberOfSequences - 2)
   }
 
   private func updateView(executionTime: TimeInterval, fibonacciNumber: Double) {
