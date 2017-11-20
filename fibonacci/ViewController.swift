@@ -12,17 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
       view.endEditing(true)
       startButtonOutlet.isEnabled = false
       startButtonOutlet.startLoading()
-      DispatchQueue.global(qos: .background).async {
-        let timeStart = Date()
-        let fibonacciNumber = self.fibonacciFormula(numberOfSequences)
-        let timeElapsed = Date()
-        let executionTime = timeElapsed.timeIntervalSince(timeStart)
-        DispatchQueue.main.async {
-          self.setViewElements(executionTime: executionTime, fibonacciNumber: fibonacciNumber)
-          self.startButtonOutlet.isEnabled = true
-          self.startButtonOutlet.stopLoading()
-        }
-      }
+      startProcessingFibonacci(numberOfSequences: numberOfSequences)
     }
   }
 
@@ -36,9 +26,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     return true
   }
 
-  private func setViewElements(executionTime: TimeInterval, fibonacciNumber: Double) {
-    timeElapsedLabel.text = String(executionTime) + " seconds"
-    fibonacciNumberLabel.text = String(fibonacciNumber)
+  private func startProcessingFibonacci(numberOfSequences: Double) {
+    DispatchQueue.global(qos: .background).async {
+      let timeStart = Date()
+      let fibonacciNumber = self.fibonacciFormula(numberOfSequences)
+      let timeElapsed = Date()
+      let executionTime = timeElapsed.timeIntervalSince(timeStart)
+      self.updateView(executionTime: executionTime, fibonacciNumber: fibonacciNumber)
+    }
   }
 
   private func fibonacciFormula(_ numberOfSequences: Double) -> Double {
@@ -46,6 +41,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
       return 1
     }
     return fibonacciFormula(numberOfSequences - 1) + fibonacciFormula(numberOfSequences - 2)
+  }
+
+  private func updateView(executionTime: TimeInterval, fibonacciNumber: Double) {
+    DispatchQueue.main.async {
+      self.timeElapsedLabel.text = String(executionTime) + " seconds"
+      self.fibonacciNumberLabel.text = String(fibonacciNumber)
+      self.startButtonOutlet.isEnabled = true
+      self.startButtonOutlet.stopLoading()
+    }
   }
 }
 
