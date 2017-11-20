@@ -116,6 +116,7 @@
                     <connections>
                         <outlet property="fibonacciNumberLabel" destination="Wd2-sX-mgu" id="Shl-R4-jpj"/>
                         <outlet property="numberOfSequencesTextField" destination="p08-7K-wcT" id="caB-tX-db4"/>
+                        <outlet property="startButtonOutlet" destination="zpV-1u-AVA" id="Qzp-Hn-UZ4"/>
                         <outlet property="timeElapsedLabel" destination="EjW-jK-K3C" id="gzv-2z-gT0"/>
                     </connections>
                 </viewController>
