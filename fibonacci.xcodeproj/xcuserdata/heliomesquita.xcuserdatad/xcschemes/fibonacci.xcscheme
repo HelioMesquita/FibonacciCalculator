@@ -39,6 +39,16 @@
                ReferencedContainer = "container:fibonacci.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDF94EFB1FC3967300A164B8"
+               BuildableName = "fibonacciUITests.xctest"
+               BlueprintName = "fibonacciUITests"
+               ReferencedContainer = "container:fibonacci.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

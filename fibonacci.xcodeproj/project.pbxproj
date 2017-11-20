@@ -15,10 +15,18 @@
 		FDF94EE71FC38C5D00A164B8 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF94EE61FC38C5D00A164B8 /* UIButton.swift */; };
 		FDF94EE91FC38D2600A164B8 /* FibonacciFormulaHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF94EE81FC38D2600A164B8 /* FibonacciFormulaHandable.swift */; };
 		FDF94EF11FC38DFF00A164B8 /* FibonacciFormulaHandableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF94EF01FC38DFF00A164B8 /* FibonacciFormulaHandableTest.swift */; };
+		FDF94EFF1FC3967300A164B8 /* FibonacciUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF94EFE1FC3967300A164B8 /* FibonacciUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		FDF94EF31FC38DFF00A164B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDA7EF531FBE3950008FC102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDA7EF5A1FBE3950008FC102;
+			remoteInfo = fibonacci;
+		};
+		FDF94F011FC3967300A164B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDA7EF531FBE3950008FC102 /* Project object */;
 			proxyType = 1;
@@ -40,6 +48,9 @@
 		FDF94EEE1FC38DFF00A164B8 /* fibonacciTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fibonacciTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF94EF01FC38DFF00A164B8 /* FibonacciFormulaHandableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciFormulaHandableTest.swift; sourceTree = "<group>"; };
 		FDF94EF21FC38DFF00A164B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF94EFC1FC3967300A164B8 /* fibonacciUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fibonacciUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF94EFE1FC3967300A164B8 /* FibonacciUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciUITests.swift; sourceTree = "<group>"; };
+		FDF94F001FC3967300A164B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +68,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDF94EF91FC3967300A164B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +83,7 @@
 			children = (
 				FDA7EF5D1FBE3950008FC102 /* fibonacci */,
 				FDF94EEF1FC38DFF00A164B8 /* fibonacciTests */,
+				FDF94EFD1FC3967300A164B8 /* fibonacciUITests */,
 				FDA7EF5C1FBE3950008FC102 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +93,7 @@
 			children = (
 				FDA7EF5B1FBE3950008FC102 /* fibonacci.app */,
 				FDF94EEE1FC38DFF00A164B8 /* fibonacciTests.xctest */,
+				FDF94EFC1FC3967300A164B8 /* fibonacciUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +120,15 @@
 				FDF94EF21FC38DFF00A164B8 /* Info.plist */,
 			);
 			path = fibonacciTests;
+			sourceTree = "<group>";
+		};
+		FDF94EFD1FC3967300A164B8 /* fibonacciUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDF94EFE1FC3967300A164B8 /* FibonacciUITests.swift */,
+				FDF94F001FC3967300A164B8 /* Info.plist */,
+			);
+			path = fibonacciUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +169,24 @@
 			productReference = FDF94EEE1FC38DFF00A164B8 /* fibonacciTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FDF94EFB1FC3967300A164B8 /* fibonacciUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF94F031FC3967300A164B8 /* Build configuration list for PBXNativeTarget "fibonacciUITests" */;
+			buildPhases = (
+				FDF94EF81FC3967300A164B8 /* Sources */,
+				FDF94EF91FC3967300A164B8 /* Frameworks */,
+				FDF94EFA1FC3967300A164B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDF94F021FC3967300A164B8 /* PBXTargetDependency */,
+			);
+			name = fibonacciUITests;
+			productName = fibonacciUITests;
+			productReference = FDF94EFC1FC3967300A164B8 /* fibonacciUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +202,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					FDF94EED1FC38DFF00A164B8 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDA7EF5A1FBE3950008FC102;
+					};
+					FDF94EFB1FC3967300A164B8 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FDA7EF5A1FBE3950008FC102;
@@ -176,6 +228,7 @@
 			targets = (
 				FDA7EF5A1FBE3950008FC102 /* fibonacci */,
 				FDF94EED1FC38DFF00A164B8 /* fibonacciTests */,
+				FDF94EFB1FC3967300A164B8 /* fibonacciUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +245,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDF94EEC1FC38DFF00A164B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF94EFA1FC3967300A164B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,6 +280,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDF94EF81FC3967300A164B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF94EFF1FC3967300A164B8 /* FibonacciUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -227,6 +295,11 @@
 			isa = PBXTargetDependency;
 			target = FDA7EF5A1FBE3950008FC102 /* fibonacci */;
 			targetProxy = FDF94EF31FC38DFF00A164B8 /* PBXContainerItemProxy */;
+		};
+		FDF94F021FC3967300A164B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDA7EF5A1FBE3950008FC102 /* fibonacci */;
+			targetProxy = FDF94F011FC3967300A164B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -424,6 +497,38 @@
 			};
 			name = Release;
 		};
+		FDF94F041FC3967300A164B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = fibonacciUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Callidus.fibonacciUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fibonacci;
+			};
+			name = Debug;
+		};
+		FDF94F051FC3967300A164B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = fibonacciUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Callidus.fibonacciUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fibonacci;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -450,6 +555,15 @@
 			buildConfigurations = (
 				FDF94EF61FC38DFF00A164B8 /* Debug */,
 				FDF94EF71FC38DFF00A164B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF94F031FC3967300A164B8 /* Build configuration list for PBXNativeTarget "fibonacciUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF94F041FC3967300A164B8 /* Debug */,
+				FDF94F051FC3967300A164B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
