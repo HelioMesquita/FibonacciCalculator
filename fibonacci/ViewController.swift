@@ -22,6 +22,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     numberOfSequencesTextField.delegate = self
   }
 
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    numberOfSequencesTextField.resignFirstResponder()
+    return true
+  }
+
   private func setViewElements(executionTime: TimeInterval, fibonacciNumber: Double) {
     timeElapsedLabel.text = String(executionTime) + " seconds"
     fibonacciNumberLabel.text = String(fibonacciNumber)
@@ -32,10 +37,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
       return 1
     }
     return fibonacciFormula(numberOfSequences - 1) +                                    fibonacciFormula(numberOfSequences - 2)
-  }
-
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    numberOfSequencesTextField.resignFirstResponder()
-    return true
   }
 }
