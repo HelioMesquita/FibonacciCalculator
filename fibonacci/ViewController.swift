@@ -7,13 +7,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var fibonacciNumberLabel: UILabel!
 
   @IBAction func startButton(_ sender: UIButton) {
-    if let number = Double(numberOfSequencesTextField.text!) {
+    if let numberOfSequences = Double(numberOfSequencesTextField.text!) {
       view.endEditing(true)
-      let timeStart = Date()
-      let fibonacciNumber = fibonacciFormula(number)
-      let timeElapsed = Date()
-      let executionTime = timeElapsed.timeIntervalSince(timeStart)
-      setViewElements(executionTime: executionTime, fibonacciNumber: fibonacciNumber)
+      DispatchQueue.global(qos: .background).async {
+        let timeStart = Date()
+        let fibonacciNumber = self.fibonacciFormula(numberOfSequences)
+        let timeElapsed = Date()
+        let executionTime = timeElapsed.timeIntervalSince(timeStart)
+        DispatchQueue.main.async {
+          self.setViewElements(executionTime: executionTime, fibonacciNumber: fibonacciNumber)
+        }
+      }
     }
   }
 
