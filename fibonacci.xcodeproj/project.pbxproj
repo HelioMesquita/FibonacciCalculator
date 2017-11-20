@@ -14,7 +14,18 @@
 		FDA7EF691FBE3950008FC102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA7EF671FBE3950008FC102 /* LaunchScreen.storyboard */; };
 		FDF94EE71FC38C5D00A164B8 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF94EE61FC38C5D00A164B8 /* UIButton.swift */; };
 		FDF94EE91FC38D2600A164B8 /* FibonacciFormulaHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF94EE81FC38D2600A164B8 /* FibonacciFormulaHandable.swift */; };
+		FDF94EF11FC38DFF00A164B8 /* FibonacciFormulaHandableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF94EF01FC38DFF00A164B8 /* FibonacciFormulaHandableTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDF94EF31FC38DFF00A164B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDA7EF531FBE3950008FC102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDA7EF5A1FBE3950008FC102;
+			remoteInfo = fibonacci;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FDA7EF5B1FBE3950008FC102 /* fibonacci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fibonacci.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +37,20 @@
 		FDA7EF6A1FBE3950008FC102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDF94EE61FC38C5D00A164B8 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		FDF94EE81FC38D2600A164B8 /* FibonacciFormulaHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciFormulaHandable.swift; sourceTree = "<group>"; };
+		FDF94EEE1FC38DFF00A164B8 /* fibonacciTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fibonacciTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF94EF01FC38DFF00A164B8 /* FibonacciFormulaHandableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciFormulaHandableTest.swift; sourceTree = "<group>"; };
+		FDF94EF21FC38DFF00A164B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FDA7EF581FBE3950008FC102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF94EEB1FC38DFF00A164B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA7EF5D1FBE3950008FC102 /* fibonacci */,
+				FDF94EEF1FC38DFF00A164B8 /* fibonacciTests */,
 				FDA7EF5C1FBE3950008FC102 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA7EF5B1FBE3950008FC102 /* fibonacci.app */,
+				FDF94EEE1FC38DFF00A164B8 /* fibonacciTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +91,15 @@
 				FDA7EF6A1FBE3950008FC102 /* Info.plist */,
 			);
 			path = fibonacci;
+			sourceTree = "<group>";
+		};
+		FDF94EEF1FC38DFF00A164B8 /* fibonacciTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDF94EF01FC38DFF00A164B8 /* FibonacciFormulaHandableTest.swift */,
+				FDF94EF21FC38DFF00A164B8 /* Info.plist */,
+			);
+			path = fibonacciTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,19 +122,42 @@
 			productReference = FDA7EF5B1FBE3950008FC102 /* fibonacci.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FDF94EED1FC38DFF00A164B8 /* fibonacciTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF94EF51FC38DFF00A164B8 /* Build configuration list for PBXNativeTarget "fibonacciTests" */;
+			buildPhases = (
+				FDF94EEA1FC38DFF00A164B8 /* Sources */,
+				FDF94EEB1FC38DFF00A164B8 /* Frameworks */,
+				FDF94EEC1FC38DFF00A164B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDF94EF41FC38DFF00A164B8 /* PBXTargetDependency */,
+			);
+			name = fibonacciTests;
+			productName = fibonacciTests;
+			productReference = FDF94EEE1FC38DFF00A164B8 /* fibonacciTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		FDA7EF531FBE3950008FC102 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Hélio Mesquita";
 				TargetAttributes = {
 					FDA7EF5A1FBE3950008FC102 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+					};
+					FDF94EED1FC38DFF00A164B8 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDA7EF5A1FBE3950008FC102;
 					};
 				};
 			};
@@ -120,6 +175,7 @@
 			projectRoot = "";
 			targets = (
 				FDA7EF5A1FBE3950008FC102 /* fibonacci */,
+				FDF94EED1FC38DFF00A164B8 /* fibonacciTests */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +188,13 @@
 				FDA7EF691FBE3950008FC102 /* LaunchScreen.storyboard in Resources */,
 				FDA7EF661FBE3950008FC102 /* Assets.xcassets in Resources */,
 				FDA7EF641FBE3950008FC102 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF94EEC1FC38DFF00A164B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +212,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDF94EEA1FC38DFF00A164B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF94EF11FC38DFF00A164B8 /* FibonacciFormulaHandableTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDF94EF41FC38DFF00A164B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDA7EF5A1FBE3950008FC102 /* fibonacci */;
+			targetProxy = FDF94EF31FC38DFF00A164B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FDA7EF621FBE3950008FC102 /* Main.storyboard */ = {
@@ -262,6 +341,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -310,6 +390,40 @@
 			};
 			name = Release;
 		};
+		FDF94EF61FC38DFF00A164B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = fibonacciTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Callidus.fibonacciTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fibonacci.app/fibonacci";
+			};
+			name = Debug;
+		};
+		FDF94EF71FC38DFF00A164B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = fibonacciTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Callidus.fibonacciTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fibonacci.app/fibonacci";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +441,15 @@
 			buildConfigurations = (
 				FDA7EF6E1FBE3950008FC102 /* Debug */,
 				FDA7EF6F1FBE3950008FC102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF94EF51FC38DFF00A164B8 /* Build configuration list for PBXNativeTarget "fibonacciTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF94EF61FC38DFF00A164B8 /* Debug */,
+				FDF94EF71FC38DFF00A164B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
