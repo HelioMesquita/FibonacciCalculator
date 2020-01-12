@@ -8,6 +8,7 @@ extension FibonacciFormulaHandable {
     if numberOfSequences < 1 {
       return 1
     }
+    print(fibonacciFormula(numberOfSequences - 1))
     return fibonacciFormula(numberOfSequences - 1) + fibonacciFormula(numberOfSequences - 2)
   }
 }
