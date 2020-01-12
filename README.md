@@ -4,7 +4,7 @@
 [![Xcode 11.3](https://img.shields.io/badge/Xcode-11.3-blue.svg?style=flat)](https://developer.apple.com/xcode/)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://github.com/HelioMesquita/FibonacciCalculator/blob/master/LICENSE)
 
-A fibonacci calculator in swift with unit and ui tests
+A Fibonacci calculator in Swift with Unit and Ui tests
 
 ### Prerequisites
 
